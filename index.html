@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOGO — Your go-to for perfect nails</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#top">TOGO</a>
+    <nav class="desktop-nav">
+      <a href="#shop" data-i18n="navShop">Boutique</a>
+      <a href="#create" data-i18n="navCreate">Créer votre set</a>
+      <a href="#story" data-i18n="navStory">Notre histoire</a>
+      <a href="#track" data-i18n="navTrack">Suivre ma commande</a>
+    </nav>
+    <div class="header-actions">
+      <select id="languageSelect" aria-label="Language selector">
+        <option value="fr">FR</option><option value="en">EN</option><option value="ar">AR</option>
+      </select>
+      <button class="bag-button" id="bagButton" aria-label="Shopping bag">Bag <span id="bagCount">0</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Press-on nails personnalisés · Maroc</p>
+        <h1 data-i18n="heroTitle">Vos ongles.<br>Votre humeur.<br><em>Votre TOGO.</em></h1>
+        <p class="hero-text" data-i18n="heroText">Des sets pensés pour chaque look, chaque occasion et chaque version de vous.</p>
+        <div class="cta-row"><a class="button dark" href="#shop" data-i18n="shopCta">Explorer les collections</a><a class="button light" href="#create" data-i18n="createCta">Créer mon set</a></div>
+      </div>
+      <div class="hero-image image-one" role="img" aria-label="Nail art editorial image"></div>
+    </section>
+
+    <section id="shop" class="section padded">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="curated">Une sélection TOGO</p><h2 data-i18n="moodTitle">Un set pour chaque humeur.</h2></div><a class="text-link" href="#gallery" data-i18n="viewAll">Voir toute la galerie →</a></div>
+      <div class="collection-grid">
+        <article class="collection-card image-two"><span>01</span><h3>Minimal<br>& Everyday</h3><a href="#gallery" data-i18n="discover">Découvrir</a></article>
+        <article class="collection-card image-three"><span>02</span><h3>French<br>Collection</h3><a href="#gallery" data-i18n="discover">Découvrir</a></article>
+        <article class="collection-card image-four"><span>03</span><h3>Aura<br>& Chrome</h3><a href="#gallery" data-i18n="discover">Découvrir</a></article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section cream-section padded">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="galleryEyebrow">Inspiration</p><h2 data-i18n="galleryTitle">La galerie TOGO.</h2></div><p class="section-note" data-i18n="galleryNote">Sauvegardez vos favoris, recréez un design ou personnalisez-le à votre façon.</p></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section id="create" class="create-section padded">
+      <div><p class="eyebrow" data-i18n="createEyebrow">Laissez parler votre style</p><h2 data-i18n="createTitle">Votre imagination.<br>Votre collection.</h2><p data-i18n="createText">Choisissez votre inspiration, votre forme, votre longueur et votre budget. TOGO transforme votre idée en set unique.</p><a class="button dark" href="#builder" data-i18n="startBuilder">Commencer le configurateur</a></div>
+      <div class="builder-card" id="builder"><div class="builder-top"><span data-i18n="step">Étape 1 sur 3</span><strong id="builderPrice">À partir de 150 DH</strong></div><h3 data-i18n="builderTitle">Quelle ambiance vous ressemble ?</h3><div class="choice-grid"><button class="choice active" data-value="Minimaliste" data-i18n="minimal">Minimaliste</button><button class="choice" data-value="Romantique" data-i18n="romantic">Romantique</button><button class="choice" data-value="Audacieuse" data-i18n="bold">Audacieuse</button><button class="choice" data-value="Élégante" data-i18n="elegant">Élégante</button></div><button class="button dark full" id="nextStep" data-i18n="next">Continuer →</button><p class="builder-result" id="builderResult"></p></div>
+    </section>
+
+    <section id="track" class="track-section padded"><div class="track-box"><p class="eyebrow" data-i18n="trackEyebrow">Après votre commande</p><h2 data-i18n="trackTitle">Votre TOGO, en route vers vous.</h2><p data-i18n="trackText">Entrez votre référence pour consulter l’avancement de votre commande.</p><div class="track-form"><input id="trackingInput" placeholder="Ex. TOGO-2026-00001" /><button class="button dark" id="trackButton" data-i18n="trackButton">Suivre</button></div><p id="trackResult" class="track-result"></p></div></section>
+
+    <section id="story" class="story-section padded"><p class="eyebrow">TOGO</p><h2 data-i18n="storyTitle">Every mood. Every look.<br><em>Every version of you.</em></h2><p data-i18n="storyText">Née au Maroc, TOGO imagine des press-on nails accessibles, expressifs et prêts à suivre votre rythme.</p></section>
+  </main>
+
+  <footer class="site-footer"><span>TOGO © 2026</span><span data-i18n="footer">Made for you. Ready to go.</span><a href="mailto:salouacherraoui@outlook.com">Contact</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
